@@ -1,0 +1,70 @@
+h1
+{
+text-align: center;
+font-size: 500;
+color: pink;
+}
+
+h4
+{
+	text-align: center;
+}
+
+body
+{
+font-family: "Comfortaa", sans-serif;
+font-weight: 500;
+font-style: normal;
+background-color: #1d1c20;
+}
+
+h1
+{
+font-size:1000;
+}
+
+::-moz-selection
+{
+background-color: #ff66a9;
+}
+
+::selection
+{
+background-color: #ff66a9;
+}
+
+body
+{
+	color: white;
+}
+
+.sonicwave
+{
+	position: relative;
+	top: -100px;
+	right: -650px;
+}
+
+.geometrydash
+{
+	position: relative;
+	top: 90px;
+}
+.adofai
+{
+	position: relative;
+	right: -710px;	
+	top: -150px;
+}
+.jsab
+{
+	position: relative;
+	top: -150px;
+	right: -670px;
+}
+.beatsaber
+{
+	position: relative;
+	top: -160px;
+	right: -650px;
+}

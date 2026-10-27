@@ -1,0 +1,106 @@
+h1
+{
+text-align: center;
+font-size: 500;
+color: white;
+}
+
+body
+{
+font-family: "Comfortaa", sans-serif;
+font-weight: 500;
+font-style: normal;
+background-color: #1d1c20;
+}
+
+h1
+{
+font-size:1000;
+}
+
+::-moz-selection
+{
+background-color: #ff66a9;
+}
+
+::selection
+{
+background-color: #ff66a9;
+}
+
+.mania
+{
+color: white;
+}
+
+.catch
+{
+color: white;
+}
+
+.taiko {
+color: white;
+}
+
+.circles
+{
+color: white;
+}
+
+h2
+{
+	text-align: center;
+	color: pink;
+}
+
+h3
+{
+	color: pink;
+	text-align: center;
+}
+h4
+{
+	color: white;
+}
+
+.link
+{
+	position: relative;
+	top: -430px;
+	text-align: left;
+}
+
+.osulogo
+{
+	position: relative;
+	top: -990px;
+	right: -870px;
+}
+.characters {
+	position: relative;
+	top: -390px;
+	right: 0px;
+}
+.mascots
+{
+	position: relative;
+	top: -570px;
+	right: -300px;
+}
+.diagram
+{
+	position: absolute;
+	top: -2100px;
+	right: -800px;
+}
+.players
+{
+	position: absolute;
+	top: 670px;
+	right: 150px;
+}
+.icons
+{
+	position: relative;
+	top: -450px;
+}
