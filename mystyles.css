@@ -70,22 +70,38 @@ h4
 	text-align: left;
 }
 
-.osulogo
-{
-	position: relative;
-	top: -990px;
-	right: -870px;
+/* Make images scale correctly */
+img {
+    max-width: 100%;
+    height: auto;
+
+/* Main osu logo */
+.osulogo {
+    position: absolute;
+    top: 330px;
+    right: 5%;
 }
+.osulogo img {
+    width: 350px;
+}
+
+/* Character and mascot section */
 .characters {
-	position: relative;
-	top: -390px;
-	right: 0px;
+    position: relative;
+    float: left;
+    width: 45%;
+    margin-top: 30px;
 }
-.mascots
-{
-	position: relative;
-	top: -570px;
-	right: -300px;
+
+.characters img {
+    width: 430px;
+}
+
+.mascots {
+    position: relative;
+    float: right;
+    width: 45%;
+    margin-top: 100px;
 }
 .diagram
 {
@@ -103,4 +119,50 @@ h4
 {
 	position: relative;
 	top: -450px;
+}
+
+/* Second character */
+.players {
+    position: relative;
+    float: right;
+    clear: both;
+    width: 40%;
+    margin-top: 20px;
+}
+
+.players img {
+    width: 420px;
+}
+
+/* Navigation and links */
+.icons {
+    position: relative;
+    clear: both;
+    padding-top: 30px;
+}
+
+.link {
+    position: static;
+    margin-top: 20px;
+}
+/* Hide missing image until uploaded */
+.diagram {
+    display: none;
+}
+
+/* Smaller screens */
+@media (max-width: 900px) {
+    .osulogo {
+        position: static;
+        text-align: center;
+        margin: 25px 0;
+    }
+
+    .characters,
+    .mascots,
+    .players {
+        float: none;
+        width: 100%;
+        margin: 20px 0;
+    }
 }
