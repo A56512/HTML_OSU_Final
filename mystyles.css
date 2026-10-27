@@ -1,168 +1,194 @@
-h1
-{
-text-align: center;
-font-size: 500;
-color: white;
+
+/* General page styling */
+* {
+    box-sizing: border-box;
 }
 
-body
-{
-font-family: "Comfortaa", sans-serif;
-font-weight: 500;
-font-style: normal;
-background-color: #1d1c20;
+body {
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 500;
+    background-color: #1d1c20;
+    color: white;
+    margin: 0 auto;
+    padding: 16px;
+    max-width: 1500px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+    column-gap: 35px;
+    row-gap: 20px;
 }
 
-h1
-{
-font-size:1000;
+::selection {
+    background-color: #ff66a9;
 }
 
-::-moz-selection
-{
-background-color: #ff66a9;
+/* Headings */
+h1, h2, h3 {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 8px 0;
 }
 
-::selection
-{
-background-color: #ff66a9;
+h1 {
+    color: white;
+    font-size: 36px;
 }
 
-.mania
-{
-color: white;
+h2 {
+    color: pink;
+    font-size: 27px;
 }
 
-.catch
-{
-color: white;
+h3 {
+    color: pink;
+    font-size: 21px;
+}
+
+h4 {
+    color: white;
+    font-size: 19px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* Images */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Gameplay options - left */
+.gameplay {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+/* osu logo - right */
+.osulogo {
+    grid-column: 2;
+    grid-row: 4;
+    align-self: center;
+    justify-self: center;
+}
+
+.osulogo img {
+    width: 380px;
+}
+
+/* Game descriptions - left */
+.mania, .taiko, .catch, .circles {
+    grid-column: 1;
+}
+
+.mania {
+    grid-row: 5;
 }
 
 .taiko {
-color: white;
+    grid-row: 6;
 }
 
-.circles
-{
-color: white;
+.catch {
+    grid-row: 7;
 }
 
-h2
-{
-	text-align: center;
-	color: pink;
+.circles {
+    grid-row: 8;
 }
 
-h3
-{
-	color: pink;
-	text-align: center;
-}
-h4
-{
-	color: white;
-}
-
-.link
-{
-	position: relative;
-	top: -430px;
-	text-align: left;
-}
-
-/* Make images scale correctly */
-img {
-    max-width: 100%;
-    height: auto;
-
-/* Main osu logo */
-.osulogo {
-    position: absolute;
-    top: 330px;
-    right: 5%;
-}
-.osulogo img {
-    width: 350px;
-}
-
-/* Character and mascot section */
-.characters {
-    position: relative;
-    float: left;
-    width: 45%;
-    margin-top: 30px;
-}
-
-.characters img {
-    width: 430px;
-}
-
-.mascots {
-    position: relative;
-    float: right;
-    width: 45%;
-    margin-top: 100px;
-}
-.diagram
-{
-	position: absolute;
-	top: -2100px;
-	right: -800px;
-}
-.players
-{
-	position: absolute;
-	top: 670px;
-	right: 150px;
-}
-.icons
-{
-	position: relative;
-	top: -450px;
-}
-
-/* Second character */
+/* Gray-haired character - right */
 .players {
-    position: relative;
-    float: right;
-    clear: both;
-    width: 40%;
-    margin-top: 20px;
+    grid-column: 2;
+    grid-row: 5 / 9;
+    align-self: center;
+    justify-self: center;
 }
 
 .players img {
     width: 420px;
 }
 
-/* Navigation and links */
+/* Red-haired character - bottom left */
+.characters {
+    grid-column: 1;
+    grid-row: 9;
+}
+
+.characters img {
+    width: 350px;
+}
+
+/* Mascot description - bottom right */
+.mascots {
+    grid-column: 2;
+    grid-row: 9;
+    align-self: center;
+}
+
+/* Navigation */
 .icons {
-    position: relative;
-    clear: both;
-    padding-top: 30px;
+    grid-column: 1 / -1;
+    grid-row: 10;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px 0;
 }
 
 .link {
-    position: static;
-    margin-top: 20px;
+    grid-column: 1 / -1;
+    grid-row: 11;
 }
-/* Hide missing image until uploaded */
+
+/* Missing diagram */
 .diagram {
     display: none;
 }
 
-/* Smaller screens */
+/* Responsive layout */
 @media (max-width: 900px) {
-    .osulogo {
-        position: static;
-        text-align: center;
-        margin: 25px 0;
+    body {
+        display: block;
+        padding: 12px;
     }
 
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    .gameplay,
+    .mania,
+    .taiko,
+    .catch,
+    .circles,
+    .osulogo,
     .characters,
     .mascots,
     .players {
-        float: none;
         width: 100%;
         margin: 20px 0;
+    }
+
+    .osulogo img,
+    .players img,
+    .characters img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .icons {
+        gap: 20px;
     }
 }
